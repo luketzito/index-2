@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logo-removebg-preview.png">
+    <title>VlogNow</title>
+    <link rel="stylesheet" href="Welc.css">
+    <style>
+        body {
+            background-color: #3e4536;
+        }
+
+        main {
+            height: 90vh;
+            width: 100%;
+        }
+
+        .ap {
+            text-align: center;
+            color: aliceblue;
+            font-size: 5em;
+            margin-top: 3vh;
+            margin-bottom: 5vh;
+        }
+
+        .obj {
+            margin-top: 3vh;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 500;
+
+            padding: 4%;
+        }
+
+        .op {
+            background-color: #e8dacc;
+            border-radius: 30px;
+            margin-right: 22vw;
+            margin-left: 22vw;
+        }
+
+        .op li {
+            text-align: center;
+            font-size: 2em;
+            font-weight: 500;
+            list-style: none;
+            padding: 4%;
+        }
+
+        .op ul {
+            padding-bottom: 3%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav-bar">
+
+            <div class="titulo">
+                <img class="logos" src="imagens/logo-removebg-preview.png" alt="Logo">
+                <h1>VlogNow</h1>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="item"><a href="/" class="nav-link">Inicio</a></li>
+                    <li class="item"><a href="Vlogs.html" class="nav-link">Vlogs</a></li>
+                    <li class="item"> <a href="SobreNos.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="item"> <a href="#" class="nav-link">Objetivos</a></li>
+                </ul>
+            </div>
+
+            <div class="contato">
+                <button><a
+                        href="https://teams.microsoft.com/l/chat/48:notes/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
+                        target="_blank" rel="external">Contato</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img src="imagens/pipi.png" alt="Menu" class="icon">
+                </button>
+            </div>
+
+            <div class="mobile-menu">
+                <ul>
+                    <li class="item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="item"><a href="pagina1.html" class="nav-link">Vlogs</a></li>
+                    <li class="item"> <a href="pagina2.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="item"> <a href="" class="nav-link">Objetivos</a></li>
+                </ul>
+
+                <div class="contato">
+                    <button><a
+                            href="https://teams.microsoft.com/l/chat/48:notes/conversations?context=%7B%22contextType%22%3A%22chat%22%7D">Contato</a></button>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1 class="ap">🎯 Objetivo do Projeto VlogNow</h1>
+
+        <div class="op">
+            <p class="obj">O site VlogNow é a publicação do conteúdo de um vlog sobre alergias alimentares, criado para
+                atender aos
+                requisitos de um trabalho prático da disciplina de Produção de Texto, sob orientação da Professora
+                Marília.
+
+            <ul>
+
+                <li> --Objetivos Principais--</li>
+
+                <li>
+                    Finalidade Acadêmica: Cumprir o trabalho de Produção de Texto, demonstrando a capacidade de
+                    estruturar e
+                    adaptar um texto informativo para o formato de vídeo (vlog) e publicá-lo em uma plataforma <br>
+                </li>
+
+                <li>Missão do Conteúdo (Vlog): Educar e conscientizar o público sobre alergias alimentares de forma
+                    clara e
+                    acessível. O vlog detalha os mecanismos da alergia, fatores de risco, diagnóstico e tratamento,
+                    desmistificando o tema. <br></li>
+
+                <li>Plataforma de Publicação: Utilizar o site como um meio funcional e organizado para veicular o
+                    conteúdo
+                    do
+                    vlog, integrando texto e mídia audiovisual. </li>
+
+            </ul>
+            </p>
+        </div>
+    </main>
+
+    <script>function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu')
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open')
+                document.querySelector('.icon').src = "imagens/pipi.png"
+            } else {
+                menuMobile.classList.add('open')
+                document.querySelector('.icon').src = "imagens/xzin.png"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

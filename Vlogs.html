@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logo-removebg-preview.png">
+    <title> VlogNow-Vlogs</title>
+    <link rel="stylesheet" href="Welc.css">
+    <style>
+        main {
+            height: 90vh;
+            width: 100%;
+            background-color: #3e4536;
+        }
+
+        .ApiceA {
+            text-align: center;
+            font-size: 5em;
+            padding-top: 2vh;
+            color: aliceblue;
+            margin-bottom: 2vh;
+        }
+
+        .vlogP1 {
+            display: none;
+            height: 50vh;
+        }
+
+        .vlogP1.open {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .AbaVlogs {
+            background-color: #e8dacc;
+            border-radius: 15px;
+            margin-left: 13vw;
+            margin-right: 13vw;
+            align-items: center;
+        }
+
+        .simboloVlog {
+            display: inline;
+            font-weight: 900;
+            font-size: 1.7em;
+            color: rgb(64, 61, 61);
+            margin-left: 1.5vw;
+        }
+
+        .AbrirVlog {
+            display: inline;
+            text-decoration: none;
+            background-color: transparent;
+            color: rgb(32, 0, 0);
+            font-size: 1.2em;
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+            text-align: left;
+            border: none;
+            font-weight: 750;
+        }
+
+        .AbrirVlog:hover {
+            cursor: pointer;
+            color: rgb(80, 92, 122);
+        }
+
+        .vlog {
+            display: flex;
+            margin-top: 1vh;
+            margin-bottom: 7vh;
+            width: 40vw;
+            height: 45vh;
+            margin-left: 2.1vw;
+        }
+
+        .linkVlog {
+            list-style: none;
+            margin-top: 9vh;
+        }
+
+        .linkVlog button {
+            font-size: 2.5em;
+            font-weight: 500;
+            ;
+            border: 2px solid rgb(62, 58, 58);
+            border-right: none;
+            border-radius: 50px 0 0 50px;
+            padding: 10px;
+            color: #070c01;
+            width: 30vw;
+            background-color: transparent;
+            margin: none;
+        }
+
+        .linkVlog {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .linkVlog button:hover {
+            cursor: pointer;
+            color: rgb(80, 92, 122);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav-bar">
+
+            <div class="titulo">
+                <img class="logos" src="imagens/logo-removebg-preview.png" alt="Logo">
+                <h1>VlogNow</h1>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="item"> <a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="item"><a href="" class="nav-link">Vlogs</a></li>
+                    <li class="item"> <a href="SobreNos.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="item"> <a href="Objetivos.html" class="nav-link">Objetivos</a></li>
+                </ul>
+            </div>
+
+            <div class="contato">
+                <button><a
+                        href="https://teams.microsoft.com/l/chat/48:notes/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
+                        target="_blank" rel="external">Contato</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img src="imagens/pipi.png" alt="Menu" class="icon">
+                </button>
+            </div>
+
+            <div class="mobile-menu">
+                <ul>
+                    <li class="item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="item"><a href="pagina1.html" class="nav-link">Vlogs</a></li>
+                    <li class="item"> <a href="pagina2.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="item"> <a href="#" class="nav-link">Objetivos</a></li>
+                </ul>
+
+                <div class="contato">
+                    <button><a
+                            href="https://teams.microsoft.com/l/chat/48:notes/conversations?context=%7B%22contextType%22%3A%22chat%22%7D">Contato</a></button>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1 class="ApiceA">Nossos Vlogs</h1>
+
+        <div class="AbaVlogs">
+
+            <div>
+                <p class="simboloVlog">∨</p>
+                <button class="AbrirVlog" onclick="vlogOpen()">Vlog - Alergias alimentares</button>
+            </div>
+
+            <div class="vlogP1">
+               <iframe class="vlog" src="https://www.youtube.com/embed/9xJnRSLBwH8?si=2IznCvuTO9jB4cr3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <ul>
+                    <li class="linkVlog"> <a href="arquivos/Roteiro - Vlog Reações Alérgicas.pdf" target="_blank"
+                            rel="external"><button>Acessar o roteiro ➤</button></a>
+                    <li class="linkVlog"> <a href="fontes.html" target="_blank" rel="external"><button>Acessar as fontes
+                                ➤</button></a>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu')
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open')
+                document.querySelector('.icon').src = "imagens/pipi.png"
+            } else {
+                menuMobile.classList.add('open')
+                document.querySelector('.icon').src = "imagens/xzin.png"
+            }
+        }
+        function vlogOpen() {
+            let vlogMenu = document.querySelector('.vlogP1')
+            if (vlogMenu.classList.contains('open')) {
+                vlogMenu.classList.remove('open')
+                document.querySelector('.simboloVlog').textContent = "∨"
+            } else {
+                vlogMenu.classList.add('open')
+                document.querySelector('.simboloVlog').textContent = "∧"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
